@@ -42,24 +42,25 @@ class Exercise
   def self.even_fibonacci(nth)
     
     sum=0
+
     for i in (0..nth)
-      f = fib(i)
-      if(f%2==0)
+      f = fib(i) #calculate next number in series
+      if(f%2==0) #check if next number is even, and add to sum
         sum += f
       end
     end
     return sum
   end
 
+  # recursive Fibonaci sequence function
   def self.fib(n)
-    if(n<2)
+    if(n<2) #base cases
       return n
     else
       return fib(n-1) + fib(n-2)
     end
   end
-end
 
-puts Exercise.even_fibonacci(10)
+end
 
 
